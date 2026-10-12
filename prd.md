@@ -360,12 +360,12 @@ Le cose esterne senza cui non potete andare avanti.
 | Area | Scelta | Alternativa considerata | Perché avete scelto così |
 | --- | --- | --- | --- |
 | Backend | Python (FastAPI) | Node.js (Express) | FastAPI offre prestazioni paragonabili a Node.js grazie al supporto asincrono (async/await), ma garantisce una validazione dei dati nativa (tramite Pydantic) e genera automaticamente la documentazione OpenAPI/Swagger obbligatoria. La familiarità del team con Python riduce drasticamente il rischio di errori architetturali. |
-| Frontend | HTML/CSS/JavaScript Vanilla | React | Eliminando i framework Single Page Application (SPA) complessi come React o Angular, si riducono le dimensioni del pacchetto inviato ai dispositivi degli studenti (minore latenza e consumo di dati su dispositivi mobili o datati). Le chiamate API vengono effettuate in modo asincrono tramite fetch(). |
+| Frontend | React | HTML/CSS/JavaScript Vanilla | Eliminando i framework Single Page Application (SPA) complessi come React o Angular, si riducono le dimensioni del pacchetto inviato ai dispositivi degli studenti (minore latenza e consumo di dati su dispositivi mobili o datati). Le chiamate API vengono effettuate in modo asincrono tramite fetch(). |
 | Database | MySQL (gestito con HeidiSQL) | MongoDB | Il dominio scolastico è intrinsecamente relazionale (es. Uno studente appartiene a una sola classe, Un voto è legato a uno studente, una verifica e un docente). L'uso di un RDBMS garantisce vincoli di integrità referenziale (ACID) e previene dati orfani o incoerenti. HeidiSQL viene impiegato dal team per la modellazione, la gestione degli indici e l'ottimizzazione delle query. |
-| Provider cloud | AWS (Amazon Web Services) | Google Cloud / Azure | Ampia disponibilità di servizi free tier / crediti per studenti ed elevata documentazione. |
+| Provider cloud | Azure | Google Cloud  | Ampia disponibilità di servizi free tier / crediti per studenti ed elevata documentazione. |
 | Servizi cloud | AWS ECS (Fargate) + RDS | AWS EC2 Monolitico | Fargate a container gestiti consente scalabilità modulare senza gestire l'OS sottostante. |
 | Regione | eu-west-1 (Ireland) | us-east-1 | Garantisce la compliance GDPR sul trattamento dati in territorio europeo con bassa latenza. |
-| Servizio esterno | AWS S3 / SendGrid | Storage locale su disco | Archiviazione file scalabile e disaccoppiata dall'applicazione backend stateless. |
+| Servizio esterno |  SendGrid | Storage locale su disco | Archiviazione file scalabile e disaccoppiata dall'applicazione backend stateless. |
 
 ---
 
